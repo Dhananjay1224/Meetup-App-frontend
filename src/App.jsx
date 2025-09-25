@@ -27,13 +27,14 @@ function App() {
     
   const handleSearch = (query) => {
     setSearchQuery(query);
-    const filteredEvents = data?.filter((type) =>  (type.title.toLowerCase().split(" ").includes(query)) || (type.eventTags.includes(query)));
+    const filteredEvents = data?.filter((type) =>  (type.title.toLowerCase().split(" ").includes(query.toLowerCase())) || (type.eventTags.includes(query)));
     setSearchEvent(filteredEvents);
+    
     
   }
   if(searchEvent.length > 0) {
     events = searchEvent;
-  } 
+  }
   
 
   return (
