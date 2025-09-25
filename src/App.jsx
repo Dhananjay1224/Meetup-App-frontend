@@ -27,7 +27,7 @@ function App() {
     
   const handleSearch = (query) => {
     setSearchQuery(query);
-    const filteredEvents = data?.filter((type) =>  (type.title.toLowerCase() == query.toLowerCase()) || (type.eventTags.includes(query)));
+    const filteredEvents = data?.filter((type) =>  (type.title.toLowerCase().split(" ").includes(query)) || (type.eventTags.includes(query)));
     setSearchEvent(filteredEvents);
     
   }
