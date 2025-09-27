@@ -12,7 +12,7 @@ const Header = ({onSearch}) => {
 
 
     return <><header className="navbar container">
-        <nav><Link className="display-6 mx-2" to="/" style= {{fontFamily: "Brush Script MT"}}>Gatherly</Link></nav>
+        <nav><Link className="display-6 mx-2" to="/" style= {{fontFamily: "Brush Script MT", textDecoration:"none"}}>Gatherly</Link></nav>
          <form className="d-flex" role="search">
         <input className="form-control mx-2 my-2" type="search" value={search} onChange={handleInputChange} placeholder="search by title and tags" aria-label="Search"/>
       </form>

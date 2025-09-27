@@ -55,7 +55,7 @@ function App() {
           
           {events?.map((event) => (
                 <div className='col-md-4 my-2'>
-                <Link to={`/details/${event._id}`} className='link-underline-opacity-0'>
+                <Link to={`/details/${event._id}`} style={{textDecoration:"none"}}>
                 <div className="card" key={event._id}>
                     <img src= {event.frontImgUrl} className="card-img-top img-fluid" alt="event-poster"/>
                     <div className="card-img-overlay">
@@ -63,7 +63,7 @@ function App() {
                     </div>
                     <div className="card-body">
                     <small>{event.startDateAndTime.date} | {event.startDateAndTime.time}</small>
-                    <h3 className="card-text">{event.title}</h3>
+                    <h3 className="card-text" >{event.title}</h3>
                     </div>
                   </div>
                 </Link>
